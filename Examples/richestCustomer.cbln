@@ -1,0 +1,5 @@
+open std::array::*
+open std::math ::*
+
+use fn maximumWealth(accounts: matrix<int>) =>
+    accounts |> map(i => i |> reduce(+)) |> reduce(max)

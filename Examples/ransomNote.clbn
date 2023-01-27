@@ -1,0 +1,15 @@
+open std::array::*
+
+use fn canConstruct(ransomNote: string, magazine: string) => {
+    var magazine = magazine
+
+    ransomNote |> all(i => {
+        let result = magazine |> contains(i)
+
+        match magazine |> search(i) {
+            some(x) => magazine |> remove(x)
+        }
+
+         result
+    })
+}

@@ -1,0 +1,5 @@
+open std::array::*
+open std::math ::*
+
+use fn findGCD(nums: array<int>) =>
+    nums |> reduce(min) |> GCD(nums |> reduce(max))

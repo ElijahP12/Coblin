@@ -1,0 +1,9 @@
+open std::array::*
+
+use fn fizzBuzz(n: int) =>
+    range(1, n) |> map(i => match (i % 3, i % 5) {
+        (0, 0) => "Fizz-Buzz",
+        (0, _) => "Fizz"     ,
+        (_, 0) => "Buzz"     ,
+        (_, _) => "{i}"
+    })

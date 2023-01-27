@@ -1,0 +1,6 @@
+open std::array::*
+
+use fn runningSum(nums: array<int>) =>
+    nums |> enumerate |> map(
+        (i, _) => nums[:i] |> reduce<int>(+)
+    )
